@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-style: normal;
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+}
+
+:before,
+:after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    font-family: 'Poppins';
+    font-size: 14px;
+    line-height: 1.78em;
+    color: #000;
+    font-weight: normal;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Lists==================== */
+ol,
+ul {
+    list-style: none;
+}
+
+/* Links, inputs and Buttons==================== */
+a {
+    color: inherit;
+    display: inline-flex;
+    align-items: center;
+}
+
+a,
+.btn,
+.button,
+button,
+input[type="button"],
+input[type="button"],
+input[type="submit"],
+input[type="submit"],
+select {
+    outline: none;
+    -webkit-transition: all cubic-bezier(1, -0.05, 0.25, 1) 0.4s;
+    -o-transition: all cubic-bezier(1, -0.05, 0.25, 1) 0.4s;
+    transition: all cubic-bezier(1, -0.05, 0.25, 1) 0.4s;
+    cursor: pointer;
+}
+
+input,
+textarea,
+select {
+    vertical-align: middle;
+    background-color: transparent;
+    border: 1px solid #ccc;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+select {
+    -webkit-appearance: none;
+}
+
+input::-ms-clear,
+input:-ms-clear {
+    display: none;
+}
+
+textarea {
+    resize: none;
+}
+
+:disabled,
+::disabled {
+    cursor: not-allowed;
+}
+
+:readonly,
+::readonly {
+    cursor: default;
+}
+
+::-webkit-input-placeholder {
+    font-size: inherit;
+    color: #bbb9d1;
+}
+
+::-moz-placeholder {
+    font-size: inherit;
+    color: #bbb9d1;
+}
+
+:-ms-input-placeholder {
+    font-size: inherit;
+    color: #bbb9d1;
+}
+
+::-ms-input-placeholder {
+    font-size: inherit;
+    color: #bbb9d1;
+}
+
+::placeholder {
+    font-size: inherit;
+    color: #bbb9d1;
+}
+
+/* Tables==================== */
+.table,
+table {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+td {
+    vertical-align: middle;
+}
+
+/* Headings==================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+h1 {
+    font-size: 4.21em;
+    line-height: 75px;
+}
+h3 {
+    font-size: 3.48em;
+    line-height: 58px;
+}
+
+/* Other elements==================== */
+img {
+    display: inline-flex;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none;
+}
+
+br,
+.clear {
+    clear: both;
+}
+
+audio,
+video {
+    display: block;
+    width: 100%;
+}
+
+figure {
+    vertical-align: middle;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+}
+
+.container {
+    width: 100%;
+    max-width: 106.71em;
+    padding: 0 1.07em;
+    margin: 0 auto;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix:after,
+.clearfix:before {
+    content: "";
+    display: table;
+}
+
+
+input:-internal-autofill-selected {
+  background: #fff;
+}
+
+/* .loginContainer {
+  -webkit-box-shadow: 0 0 60px rgb(0 0 0 / 16%);
+  box-shadow: 0 0 60px rgb(0 0 0 / 16%);
+} */
+
+/* .loginContainer {
+  max-width: 1364px;
+  margin: 70px auto;
+  -webkit-box-shadow: 0 0 60px rgb(0 0 0 / 16%);
+  box-shadow: 0 0 60px rgb(0 0 0 / 16%);
+  background: #fff;
+  position: relative;
+  display: table;
+} */
+
+
+
+/* .loginContainer .loginFormArea {
+  width: 50%;
+  float: left;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 80px;
+  position: relative;
+} */
+
+/* .loginContainer .loginFormArea h1 {
+  font-size: 26px;
+  color: #333;
+} */
+
+/* .loginForm {
+  margin-top: 80px;
+} */
+
+
+
+/* .loginForm .formRow.fieldRow {
+  margin-top: 20px;
+  margin-bottom: 25px;
+} */
+
+.formRow {
+  margin-bottom: 15px;
+  display: inline-block;
+  width: 100%;
+}
+
+/* .loginForm .formRow label {
+  background: #509fff;
+  color: #fff;
+  font-weight: 700;
+  font-size: 12px;
+  padding: 3px 10px;
+  border-radius: 3px;
+  float: left;
+  margin: 0 0 -10px 10px;
+  position: relative;
+  z-index: 10;
+} */
+
+/* .loginForm .formControl {
+  display: block;
+  width: 100%;
+  height: 50px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #509fff;
+  border-radius: 5px;
+  outline: none;
+  background: #fff;
+  color: #586677;
+  font-size: 16px;
+  padding: 13px 10px 7px;
+  font-weight: 700;
+} */
+
+/* .loginForm .blueBtn {
+  width: 100%;
+  height: 50px;
+  font-size: 16px;
+  background: #2a71fa;
+  margin-top: 20px;
+} */
+
+/* .loginContainer .loginGraphicArea {
+  width: 50%;
+  height: 772px;
+  float: right;
+  background: url(../images/login_graphic.png)  no-repeat;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 40px 0 0 50px;
+} */
+
+
+@media screen and (max-width: 1400px) {
+  .loginContainer {
+    max-width: 990px;
+  }
+}
+
