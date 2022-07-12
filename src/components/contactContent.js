@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import { Link } from "react-router-dom";
+
 const ContactContent = () => {
   const [users, setUsers] = useState([])
   
@@ -17,7 +17,7 @@ const ContactContent = () => {
   return (
     <div className="dashboardContentWraper">
       <p>This is the Contact text section</p>
-      <Link  className="blueBtn"  to="/dashboard">Dashboard</Link>
+      {/* <Link  className="blueBtn"  to="/dashboard">Dashboard</Link> */}
       {/* {console.log("users",users)} */}
       {users.length > 0 && (
                  <table>

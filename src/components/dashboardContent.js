@@ -1,16 +1,35 @@
 import React, { useEffect, useState } from "react"
-import { Link } from "react-router-dom";
+
 const DashboardContent = () => {
-  const [infos, setInfos] = useState([])
+  const [infos, setInfos] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
   
-  const fetchData = async () => {
-    const response = await fetch("https://api.publicapis.org/entries");
-    const datas = await response.json();
-    console.log('The Basic entries',datas.entries);
-    setInfos(datas.entries)
+  // const fetchData = async () => {
+  //   const response = await fetch("https://api.publicapis.org/entries");
+  //   const datas = await response.json();
+  //   console.log('The Basic entries',datas.entries);
+  //   setInfos(datas.entries)
+  // }
+
+  // useEffect(() => {
+  //   fetchData()
+  // }, [])
+
+
+
+  const fetchData = () => {
+    setIsLoading(true)
+    fetch('https://api.publicapis.org/entries')
+      .then(response => {
+        return response.json()
+      })
+      .then(data => {
+        setIsLoading(false)
+        setInfos(data.entries)
+      })
   }
 
-  useEffect(() => {
+ useEffect(() => {
     fetchData()
   }, [])
 
@@ -18,9 +37,11 @@ const DashboardContent = () => {
   return (
     <div className="dashboardContentWraper">
       <p>This is the Dashboard text section</p>
-      <Link className="blueBtn"  to="/contact">Go to Contact page</Link>
+      {/* <Link className="blueBtn"  to="/contact">Go to Contact page</Link> */}
 
+      <input onChange={fetchData} label="Search User" placeholder="search" />
 
+  {isLoading && <p className="loader">Page is Loading...</p>}
 
       {infos.length > 0 && (
                  <table>

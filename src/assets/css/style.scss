@@ -25,7 +25,7 @@
     border: 1px solid #509fff;
     border-radius: 5px;
     outline: none;
-    background: #fff;
+    background: #e8f0fe;
     color: #586677;
     font-size: 16px;
     padding: 13px 10px 7px;
@@ -43,16 +43,19 @@
     text-align: center;
     display: grid;
   }
-  .loginGraphicArea {
-    width: 50%;
-    height: 772px;
-    float: right;
-    background: url(../images/login_graphic.png)  no-repeat;
-    box-sizing: border-box;
-    padding: 40px 0 0 50px;
+  .blueBtn:disabled {
+    opacity: 0.5;
   }
+  
 }
-
+.loginGraphicArea {
+  width: 50%;
+  height: 772px;
+  float: right;
+  background: url(../images/login_graphic.png)  no-repeat;
+  box-sizing: border-box;
+  padding: 40px 0 0 50px;
+}
 
 
 .loginContainer {
@@ -90,6 +93,15 @@
   box-shadow: 0px 2px 2px 0px #e7e7e7;
   .rightSec {
     margin-left: auto;
+    display: flex;
+    align-items: center;
+    .navbarUl {
+      margin: 0 45px 0 0;
+      li {
+        display: inline-block;
+        margin: 0 15px;
+      }
+    }
   }
 }
 
@@ -97,6 +109,8 @@
 .dashboardContentWraper {
   width: 100%;
   padding:15px;
+  height: 86.4vh;
+  overflow-y: auto;
 }
 
 // Footer Portion Css
@@ -104,6 +118,9 @@
 .footer {
   width: 100%;
   padding:10px 15px;
+  -webkit-box-shadow: 2px -1px 2px 0px #e7e7e7;
+  -moz-box-shadow: 2px -1px 2px 0px #e7e7e7;
+  box-shadow: 2px -1px 2px 0px #e7e7e7;
   p {
     text-align: center;
   }
@@ -121,9 +138,15 @@ td {
 }
 
 .true {
-  color: green;
+  color: green ;
 }
 
 .false {
   color: red;
+}
+
+.loader {
+  width: 100%;
+  text-align: center;
+  margin:50px 0;
 }
