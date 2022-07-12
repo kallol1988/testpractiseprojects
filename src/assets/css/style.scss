@@ -156,3 +156,32 @@ td {
   pointer-events: none;
   cursor: none;
 }
+
+.contentWraper {
+  width: 100%;
+  padding: 15px 20px;
+  display: block;
+  h2 {
+    margin-bottom: 15px;
+  }
+  h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  p {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0 0 5px 0;
+  }
+}
+
+.leftSecContact {
+  width: 48%;
+  float: left;
+}
+
+.rightSecContact {
+  width: 48%;
+  float: right;
+}
+
