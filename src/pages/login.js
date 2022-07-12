@@ -33,7 +33,7 @@ const LoginPage = () => {
     console.log('Password value is:', event.target.value);
     console.log('Password length:', checkPassword.length);
     console.log('Password State:', passwordErrors);
-    if(checkPassword.length > 5) {
+    if(checkPassword.length > 4) {
       setPasswordErrors(null);  
       console.log('Password State:', passwordErrors);   
     } else {
@@ -67,7 +67,7 @@ const LoginPage = () => {
             
             <div className="formRow">
                 
-                <Link className={loginActive ? "blueBtn" : "blueBtn inactive"} to="/dashboard">Login</Link> 
+                <Link className={emailErrors === null && passwordErrors === null ? "blueBtn" : "blueBtn inactive"} to="/dashboard">Login</Link> 
                 {/* <button className="blueBtn" id="submit" value="Submit" disabled>Login</button> */}
             </div>
         </div>

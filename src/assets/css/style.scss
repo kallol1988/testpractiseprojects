@@ -150,3 +150,9 @@ td {
   text-align: center;
   margin:50px 0;
 }
+
+.inactive {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: none;
+}
