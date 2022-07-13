@@ -16,7 +16,7 @@ const ContactContent = () => {
 
   return (
     <div className="dashboardContentWraper">
-      <p>This is the Contact text section</p>
+      
       {/* <Link  className="blueBtn"  to="/dashboard">Dashboard</Link> */}
       {/* {console.log("users",users)} */}
       {users.length > 0 && (
@@ -41,12 +41,13 @@ const ContactContent = () => {
             <div className="contentWraper">
 
               <div className="leftSecContact">
-                <h2>Personal Info</h2>
-                <h4>Name</h4>
-                <p>{user.name.title} {user.name.first} {user.name.last}</p>
+                <h2 >Personal Info</h2>
+                <img className="profileImg" src={user.picture.large} alt="" />
 
-                <h4>Gender</h4>
-                <p>{user.gender}</p>
+
+                <h4 className="nameInfos">{user.name.title} {user.name.first} {user.name.last}</h4>
+             
+
 
                 <h4>Email</h4>
                 <p>{user.email}</p>
@@ -57,8 +58,8 @@ const ContactContent = () => {
                 <h4>Cell</h4>
                 <p>{user.cell}</p>
 
-                <h4>Age</h4>
-                <p>{user.dob.age}</p>
+                
+
 
                 
 
@@ -66,20 +67,19 @@ const ContactContent = () => {
 
               <div className="rightSecContact">
                 <h2>Other Info</h2>
+
+                <h4>Gender</h4>
+                <p>{user.gender}</p>
+
+                <h4>Age</h4>
+                <p>{user.dob.age}</p>
+
                 <h4> Address</h4>
-                <p>{user.location.street.number} {user.location.street.name}</p>
-
-                <h4>City</h4>
-                <p>{user.location.city}</p>
-
-                <h4>State</h4>
-                <p>{user.location.state}</p>
-
-                <h4>Post Code</h4>
-                <p>{user.location.postcode}</p>
-
-                <h4>Country</h4>
-                <p>{user.location.country}</p>
+                <p>{user.location.street.number} {user.location.street.name} , {user.location.city} , {user.location.state}
+                <br />
+                {user.location.postcode}
+                <br />
+                {user.location.country}</p>
 
               </div>
             </div>

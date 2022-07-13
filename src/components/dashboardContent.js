@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react"
 const DashboardContent = () => {
   const [infos, setInfos] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  
+  const [searchTerm, setSearchTerm] = useState('');
   // const fetchData = async () => {
   //   const response = await fetch("https://api.publicapis.org/entries");
   //   const datas = await response.json();
@@ -36,11 +36,13 @@ const DashboardContent = () => {
 
   return (
     <div className="dashboardContentWraper">
-      <p>This is the Dashboard text section</p>
+      <p>Welcome to the Dashboard, <b>Kallol</b></p>
       {/* <Link className="blueBtn"  to="/contact">Go to Contact page</Link> */}
-
-      <input onChange={fetchData} label="Search User" placeholder="search" />
-
+      <div className="wraperClass">
+        <div className="rightSecDash">
+          <input className="searchBars" onChange={event => {setSearchTerm(event.target.value)}} label="Search User" placeholder="Search API...." />
+        </div>
+      </div>
   {isLoading && <p className="loader">Page is Loading...</p>}
 
       {infos.length > 0 && (
@@ -55,7 +57,13 @@ const DashboardContent = () => {
                     <th>Category</th>
                   </tr>
                 
-          {infos.map((information, index) => {
+          {infos.filter((information) => {
+            if(searchTerm == "") {
+              return information
+            } else if (information.API.toLowerCase().includes(searchTerm.toLocaleLowerCase())) {
+              return information
+            }
+          }).map((information, index) => {
             return(
               
              <tr key={information.API}>

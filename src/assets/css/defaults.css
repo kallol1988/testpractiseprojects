@@ -312,6 +312,16 @@ input:-internal-autofill-selected {
   padding: 40px 0 0 50px;
 } */
 
+img.profileImg {
+    width: 320px;
+    margin: 0 0 20px 0;
+  }
+  
+  .nameInfos {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
 
 @media screen and (max-width: 1400px) {
   .loginContainer {
